@@ -14,14 +14,14 @@
   <!-- Style tweaks -->
   <style>
     :root{
-      --cream:#FFFDF6;          /* slightly warm off‑white background */
-      --link:#0066cc;
-      --link-hover:#004b99;
+      --light-blue:#F0F8FF;     /* light blue background (Alice Blue) */
+      --link:#1e5a99;
+      --link-hover:#0d3d6b;
     }
 
     html{ scroll-behavior:smooth; }
     body{
-      background:var(--cream);
+      background:var(--light-blue);
       font-family:"Palatino Linotype","Book Antiqua",Palatino,"URW Palladio L","EB Garamond",serif;
       color:#111;
     }
@@ -48,10 +48,10 @@
 
     html{scroll-behavior:smooth;}
 
-    /* Navbar matches the cream background */
+    /* Navbar matches the light blue background */
   .navbar {
-    background-color: rgb(255, 254, 249);
-    border-bottom: 1px solid #e4dcc7;   /* faint separator so it doesn’t “float” */
+    background-color: #E6F3FF;
+    border-bottom: 1px solid #B8D9F5;   /* faint separator so it doesn't "float" */
   }
 
   /* Keep text dark enough for contrast */
@@ -87,8 +87,8 @@
 
   /* Reviewers/Program Committee styling */
   .reviewers-section {
-    background: #f9f7f0;
-    border-top: 1px solid #e4dcc7;
+    background: #E6F2FF;
+    border-top: 1px solid #B8D9F5;
     padding: 3rem 0;
   }
   
@@ -108,7 +108,7 @@
   .reviewer-name {
     padding: 0.15rem;
     background: white;
-    border: 1px solid #e4dcc7;
+    border: 1px solid #B8D9F5;
     border-radius: 2px;
     text-align: center; 
     font-size: 0.95rem;
@@ -116,10 +116,10 @@
   }
   
   .reviewer-name:hover {
-    background: var(--cream);
-    border-color: #d4c4b0;
+    background: var(--light-blue);
+    border-color: #85BFE8;
     transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(30,90,153,0.1);
   }
   
   .reviewer-name a {
@@ -159,6 +159,7 @@
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#call">Call for Papers</a></li>
           <!-- <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
           <li class="nav-item"><a class="nav-link" href="#organizers">Organizers</a></li>
           <li class="nav-item"><a class="nav-link" href="#pc">Program Committee</a></li>
         </ul>
@@ -221,7 +222,7 @@
         
         <li><strong>Real-World Applications and Case Studies:</strong> Therapeutic and mental health settings, legal contexts, 
         education, market research, creative industries, and accessibility technologies.</li>
-      </ul>
+         </ul>
       <p>Submissions may report new results, negative findings, benchmarks, or visionary perspectives.</p>
       
       <h3 class="mt-4">Submission Guidelines</h3>
@@ -246,13 +247,63 @@
     </div>
   </section>
 
-  <!-- SPEAKERS - TBA -->
-  <!-- <section class="py-5 bg-light" id="speakers">
+  <!-- SPEAKERS -->
+  <section class="py-5 bg-light" id="speakers">
     <div class="container">
       <h2 class="text-center mb-4">Invited Speakers</h2>
-      <p class="text-center lead">To be announced</p>
+      <div class="flex-row-wrap">
+        <div class="card speaker-card">
+          <a href="https://serinachang5.github.io/" class="clickable-image">
+            <img src="./speakers/serinac.png" alt="Serina Chang" class="speaker-img">
+</a>
+          <div class="card-body">
+            <span class="speaker-name">Serina Chang</span>
+            <small>UC Berkeley</small>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="card speaker-card">
+          <a href="https://zhijing-jin.com/" class="clickable-image">
+            <img src="./speakers/zhijing.png" alt="Zhijing Jin" class="speaker-img">
+</a>
+          <div class="card-body">
+            <span class="speaker-name">Zhijing Jin</span>
+            <small>University of Toronto / Max Planck Institute</small>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="card speaker-card">
+          <a href="https://psych.wustl.edu/people/josh-oltmanns" class="clickable-image">
+            <img src="./speakers/JoshOltmanns.png" alt="Josh Oltmanns" class="speaker-img">
+</a>
+          <div class="card-body">
+            <span class="speaker-name">Josh Oltmanns</span>
+            <small>Washington University in St. Louis</small>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="card speaker-card">
+          <a href="https://homes.cs.washington.edu/~althoff/" class="clickable-image">
+            <img src="./speakers/tim_althoff.png" alt="Tim Althoff" class="speaker-img">
+</a>
+          <div class="card-body">
+            <span class="speaker-name">Tim Althoff</span>
+            <small>University of Washington</small>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="card speaker-card">
+          <a href="https://www.cs.cmu.edu/~cprose/" class="clickable-image">
+            <img src="./speakers/rose.png" alt="Carolyn Penstein Rosé" class="speaker-img">
+</a>
+          <div class="card-body">
+            <span class="speaker-name">Carolyn Penstein Rosé</span>
+            <small>Carnegie Mellon University</small>
+          </div>
+        </div>
+      </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- ORGANISERS -->
   <section class="py-5" id="organizers">
@@ -260,97 +311,7 @@
       <h2 class="text-center mb-4">Organizers</h2>
       <div class="flex-row-wrap">
         <div class="card organizer-card">
-	<a href="https://scholar.google.com/citations?user=yunzex" class="clickable-image">
-          <img src="./organizers/YunzeXiao.jpeg" alt="Yunze Xiao" class="organizer-img">
-</a>
-          <div class="card-body">
-            <span class="organizer-name">Yunze Xiao</span>
-            <small>Carnegie Mellon University</small>
-          </div>
-        </div>
-        <div class="card organizer-card">
-	<a href="https://scholar.google.com/citations?user=shuyang" class="clickable-image">
-          <img src="./organizers/shuyang.png" alt="Shu Yang" class="organizer-img">
-</a>
-          <div class="card-body">
-            <span class="organizer-name">Shu Yang</span>
-            <small>KAUST</small>
-          </div>
-        </div>
-        <div class="card organizer-card">
-	<a href="https://scholar.google.com/citations?user=lizhuang" class="clickable-image">
-          <img src="./organizers/lizhuang.png" alt="Zhuang Li" class="organizer-img">
-</a>
-          <div class="card-body">
-            <span class="organizer-name">Zhuang Li</span>
-            <small>RMIT University</small>
-          </div>
-        </div>
-        <div class="card organizer-card">
-	<a href="https://scholar.google.com/citations?user=lucio" class="clickable-image">
-          <img src="./organizers/lucio.png" alt="Lucio La Cava" class="organizer-img">
-</a>
-          <div class="card-body">
-            <span class="organizer-name">Lucio La Cava</span>
-            <small>University of Calabria</small>
-          </div>
-        </div>
-        <div class="card organizer-card">
-	<a href="https://scholar.google.com/citations?user=jentse" class="clickable-image">
-          <img src="./organizers/jentsehuang.jpeg" alt="Jen-Tse Huang" class="organizer-img">
-</a>
-          <div class="card-body">
-            <span class="organizer-name">Jen-Tse (Jay) Huang</span>
-            <small>Johns Hopkins University</small>
-          </div>
-        </div>
-        <div class="card organizer-card">
-	<a href="https://scholar.google.com/citations?user=andrea" class="clickable-image">
-          <img src="./organizers/AndreaTagarelli.png" alt="Andrea Tagarelli" class="organizer-img">
-</a>
-          <div class="card-body">
-            <span class="organizer-name">Andrea Tagarelli</span>
-            <small>University of Calabria</small>
-          </div>
-        </div>
-        <div class="card organizer-card">
-	<a href="https://scholar.google.com/citations?user=xintao" class="clickable-image">
-          <img src="./organizers/xintaowang.png" alt="Xintao Wang" class="organizer-img">
-</a>
-          <div class="card-body">
-            <span class="organizer-name">Xintao Wang</span>
-            <small>Fudan University</small>
-          </div>
-        </div>
-        <div class="card organizer-card">
-	<a href="https://scholar.google.com/citations?user=marco" class="clickable-image">
-          <img src="./organizers/Marco-Guerini.png" alt="Marco Guerini" class="organizer-img">
-</a>
-          <div class="card-body">
-            <span class="organizer-name">Marco Guerini</span>
-            <small>Fondazione Bruno Kessler</small>
-          </div>
-        </div>
-        <div class="card organizer-card">
-	<a href="https://scholar.google.com/citations?user=jiarui" class="clickable-image">
-          <img src="./organizers/jiaruiliu.png" alt="Jiarui Liu" class="organizer-img">
-</a>
-          <div class="card-body">
-            <span class="organizer-name">Jiarui Liu</span>
-            <small>Carnegie Mellon University</small>
-          </div>
-        </div>
-        <div class="card organizer-card">
-	<a href="https://scholar.google.com/citations?user=jindong" class="clickable-image">
-          <img src="./organizers/jingdongwang.png" alt="Jindong Wang" class="organizer-img">
-</a>
-          <div class="card-body">
-            <span class="organizer-name">Jindong Wang</span>
-            <small>William &amp; Mary</small>
-          </div>
-        </div>
-        <div class="card organizer-card">
-	<a href="https://scholar.google.com/citations?user=mona" class="clickable-image">
+	<a href="https://scholar.google.com/citations?user=-y6SIhQAAAAJ" class="clickable-image">
           <img src="./organizers/mona.jpeg" alt="Mona Diab" class="organizer-img">
 </a>
           <div class="card-body">
@@ -359,11 +320,101 @@
           </div>
         </div>
         <div class="card organizer-card">
-	<a href="https://scholar.google.com/citations?user=maarten" class="clickable-image">
+	<a href="https://scholar.google.com/citations?user=vTRCvFYAAAAJ" class="clickable-image">
+          <img src="./organizers/AndreaTagarelli.png" alt="Andrea Tagarelli" class="organizer-img">
+</a>
+          <div class="card-body">
+            <span class="organizer-name">Andrea Tagarelli</span>
+            <small>University of Calabria</small>
+          </div>
+        </div>
+        <div class="card organizer-card">
+	<a href="https://scholar.google.com/citations?user=gFN4QUYAAAAJ" class="clickable-image">
           <img src="./organizers/MaartenSap.png" alt="Maarten Sap" class="organizer-img">
 </a>
           <div class="card-body">
             <span class="organizer-name">Maarten Sap</span>
+            <small>Carnegie Mellon University</small>
+          </div>
+        </div>
+        <div class="card organizer-card">
+	<a href="https://scholar.google.com/citations?user=hBZ_tKsAAAAJ" class="clickable-image">
+          <img src="./organizers/jingdongwang.png" alt="Jindong Wang" class="organizer-img">
+</a>
+          <div class="card-body">
+            <span class="organizer-name">Jindong Wang</span>
+            <small>William &amp; Mary</small>
+          </div>
+        </div>
+        <div class="card organizer-card">
+	<a href="https://scholar.google.com/citations?user=9DI3nP4AAAAJ" class="clickable-image">
+          <img src="./organizers/lucio.png" alt="Lucio La Cava" class="organizer-img">
+</a>
+          <div class="card-body">
+            <span class="organizer-name">Lucio La Cava</span>
+            <small>University of Calabria</small>
+          </div>
+        </div>
+        <div class="card organizer-card">
+	<a href="https://scholar.google.com/citations?user=dt-Fys0AAAAJ" class="clickable-image">
+          <img src="./organizers/Marco-Guerini.png" alt="Marco Guerini" class="organizer-img">
+</a>
+          <div class="card-body">
+            <span class="organizer-name">Marco Guerini</span>
+            <small>Fondazione Bruno Kessler</small>
+          </div>
+        </div>
+        <div class="card organizer-card">
+	<a href="https://scholar.google.com/citations?hl=zh-CN&user=4uhU0NUAAAAJ" class="clickable-image">
+          <img src="./organizers/lizhuang.png" alt="Zhuang Li" class="organizer-img">
+</a>
+          <div class="card-body">
+            <span class="organizer-name">Zhuang Li</span>
+            <small>RMIT University</small>
+          </div>
+        </div>
+        <div class="card organizer-card">
+	<a href="https://scholar.google.com/citations?user=XBzDTAQAAAAJ" class="clickable-image">
+          <img src="./organizers/jentsehuang.jpeg" alt="Jen-Tse Huang" class="organizer-img">
+</a>
+          <div class="card-body">
+            <span class="organizer-name">Jen-Tse (Jay) Huang</span>
+            <small>Johns Hopkins University</small>
+          </div>
+        </div>
+        <div class="card organizer-card">
+	<a href="https://scholar.google.com.hk/citations?hl=en&user=3PMO0KYAAAAJ" class="clickable-image">
+          <img src="./organizers/xintaowang.png" alt="Xintao Wang" class="organizer-img">
+</a>
+          <div class="card-body">
+            <span class="organizer-name">Xintao Wang</span>
+            <small>Fudan University</small>
+          </div>
+        </div>
+        <div class="card organizer-card">
+	<a href="https://scholar.google.com.hk/citations?hl=en&user=95n7XTkAAAAJ" class="clickable-image">
+          <img src="./organizers/YunzeXiao.jpeg" alt="Yunze Xiao" class="organizer-img">
+</a>
+          <div class="card-body">
+            <span class="organizer-name">Yunze Xiao</span>
+            <small>Carnegie Mellon University</small>
+          </div>
+        </div>
+        <div class="card organizer-card">
+	<a href="https://scholar.google.com/citations?hl=en&user=RrKb-9oAAAAJ" class="clickable-image">
+          <img src="./organizers/shuyang.png" alt="Shu Yang" class="organizer-img">
+</a>
+          <div class="card-body">
+            <span class="organizer-name">Shu Yang</span>
+            <small>KAUST</small>
+          </div>
+        </div>
+        <div class="card organizer-card">
+	<a href="https://scholar.google.com/citations?user=mSIhZTAAAAAJ" class="clickable-image">
+          <img src="./organizers/jiaruiliu.png" alt="Jiarui Liu" class="organizer-img">
+</a>
+          <div class="card-body">
+            <span class="organizer-name">Jiarui Liu</span>
             <small>Carnegie Mellon University</small>
           </div>
         </div>
